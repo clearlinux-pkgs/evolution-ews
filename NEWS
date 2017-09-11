@@ -1,42 +1,98 @@
-Evolution-EWS 3.24.5 2017-08-07
+Evolution-EWS 3.26.0 2017-09-11
 -------------------------------
+
+Miscellaneous:
+	No code/translation changes
+
+Evolution-EWS 3.25.92.2 2017-09-04
+----------------------------------
+
+Miscellaneous:
+	Do not use PROJECT_VERSION_TWEAK when searching for eds/evo dependencies (Milan Crha)
+
+Evolution-EWS 3.25.92.1 2017-09-04
+----------------------------------
+
+Miscellaneous:
+	Revert "Adapt to rename of evolution.desktop to org.gnome.Evolution.desktop" (Milan Crha)
+
+Evolution-EWS 3.25.92 2017-09-04
+--------------------------------
+
+Bug Fixes:
+	Bug 782826 - Allow adding Free/Busy as a foreign Calendar ][ (Milan Crha)
+	Bug 786095 - Replies to meeting requests with RSVP=false (Milan Crha)
+
+Miscellaneous:
+	Adapt to rename of evolution.desktop to org.gnome.Evolution.desktop (Milan Crha)
+
+Translations:
+	Marek Cernocky (cs)
+	Balázs Úr (hu)
+
+Evolution-EWS 3.25.91 2017-08-21
+--------------------------------
+
+Translations:
+	Rafael Fontenelle (pt_BR)
+	Kukuh Syafaat (id)
+	Matej Urbančič (sl)
+	Мирослав Николић (sr)
+	Мирослав Николић (sr@latin)
+	Josef Andersson (sv)
+
+Evolution-EWS 3.25.90 2017-08-07
+--------------------------------
 
 Bug Fixes:
 	Bug 785188 - Do not add LIB_INSTALL_DIR into RPATH (Milan Crha)
+	Bug 750564 - Make server settings lookup extensible (Milan Crha)
 
 Translations:
 	Mario Blättermann (de)
 	Balázs Meskó (hu)
+	Piotr Drąg (pl)
 
-Evolution-EWS 3.24.4 2017-07-17
+Evolution-EWS 3.25.4 2017-07-17
 -------------------------------
 
 Bug Fixes:
+	Bug 625149 - Support offline for books/calendars (Milan Crha)
+	Bug 783987 - Mail account assistant/editor too tall for small resolution (Milan Crha)
 	Bug 784332 - EXDATE missed in recurring events (Milan Crha)
 	Bug 784058 - Ignores Exchange backoff response (Milan Crha)
 	Bug 784775 - PublicDL members replaced with DL aliases in online GAL (Milan Crha)
 
+Miscellaneous:
+	Fix a crash on local cache update of a GAL from OAB (Milan Crha)
+
 Translations:
+	Daniel Mustieles (es)
+	Rafael Fontenelle (pt_BR)
 	Piotr Drąg (pl)
 	Kukuh Syafaat (id)
 
-Evolution-EWS 3.24.3 2017-06-19
+Evolution-EWS 3.25.3 2017-06-19
 -------------------------------
+
+Bug Fixes:
+	Bug 782826 - Allow adding Free/Busy as a foreign Calendar (Milan Crha)
 
 Miscellaneous:
 	e_ews_connection_try_credentials_sync() asks for password when not needed (Milan Crha)
+	Derive from EBookMetaBackend and ECalMetaBackend (Milan Crha)
 	Allow overwrite of CMAKE_SKIP_RPATH variable (Milan Crha)
 
-Evolution-EWS 3.24.2 2017-05-08
+Translations:
+	Piotr Drąg (pl)
+
+Evolution-EWS 3.25.2 2017-05-22
 -------------------------------
 
 Bug Fixes:
 	Bug 781833 - Do not set '-Wl,--no-undefined' on BSD (Antoine Jacoutot)
 
-Translations:
-	Inaki Larranaga Murgoitio (eu)
-
-Evolution-EWS 3.24.1 2017-04-10
+Evolution-EWS 3.25.1 2017-04-24
 -------------------------------
 
 Bug Fixes:
