@@ -1,52 +1,122 @@
-Evolution-EWS 3.26.6 2018-03-05
+Evolution-EWS 3.28.0 2018-03-12
 -------------------------------
+
+Translations:
+	Joe Hansen (da)
+	Alan Mortensen (da)
+	Anders Jonsson (sv)
+
+Evolution-EWS 3.27.92 2018-03-05
+--------------------------------
 
 Bug Fixes:
 	Bug 793606 - Fails to import events without DTEND (Milan Crha)
+	Bug 763455 - Server-side password change doesn't reconnect book/calendar (Milan Crha)
 
-Evolution-EWS 3.26.5 2018-02-05
--------------------------------
+Miscellaneous:
+	Fix runtime warning when attendee has no ResponseType (Milan Crha)
+
+Translations:
+	Marek Cernocky (cs)
+	Daniel Mustieles (es)
+	Мирослав Николић (sr)
+	Мирослав Николић (sr@latin)
+	Mario Blättermann (de)
+	Rafael Fontenelle (pt_BR)
+	Gábor Kelemen (hu)
+
+Evolution-EWS 3.27.91 2018-02-19
+--------------------------------
 
 Bug Fixes:
-	Bug 793037 - Some appointments displayed as meetings (Milan Crha)
+	Bug 793104 - COMPLETED in libical 3.0+ is DATE-TIME only (Milan Crha)
+	Bug 775690 - Support OAuth2 for outlook.office365.com (Milan Crha)
+	Bug 793368 - Install AppStream metadata to /usr/share/metainfo/ (Jeremy Bicha)
 
-Evolution-EWS 3.26.4 2018-01-08
+Miscellaneous:
+	Correct possible scope for Office365 OAuth2 (Milan Crha)
+	Add translator comments around 'Tenant' word (Milan Crha)
+	Check validity of returned values in 'Folder Sizes' function (Milan Crha)
+	Various changes related to outlook.office365.com server (Milan Crha)
+	Office365.com OAuth2 - Relax the 'prompt' user interaction type (Milan Crha)
+
+Translations:
+	Marek Cernocky (cs)
+	Piotr Drąg (pl)
+
+Evolution-EWS 3.27.90 2018-02-05
+--------------------------------
+
+Bug Fixes:
+	Bug 792411 - Use GetUserPhoto to lookup sender's photo (Milan Crha)
+	Bug 793037 - Some appointments displayed as meetings (Milan Crha)
+	Bug 775690 - Support OAuth2 for outlook.office365.com (initial changes) (Milan Crha)
+
+Translations:
+	Marek Cernocky (cs)
+
+Evolution-EWS 3.27.4 2018-01-08
 -------------------------------
 
 Bug Fixes:
 	Bug 792190 - Fails to update offline GAL (Milan Crha)
 
-Evolution-EWS 3.26.3 2017-12-11
--------------------------------
-
 Miscellaneous:
-	[ECalBackendEws] Prevent crash when item has no MIME content set (Milan Crha)
+	Ignore address books with UUID-like name (Milan Crha)
 
 Translations:
-	Ask Hjorth Larsen (da)
+	Rafael Fontenelle (pt_BR)
+	Daniel Mustieles (es)
 
-Evolution-EWS 3.26.2 2017-10-30
+Evolution-EWS 3.27.3 2017-12-11
 -------------------------------
 
 Bug Fixes:
+	Bug 790450 - Check response headers for credential expiration hints (Milan Crha)
+
+Miscellaneous:
+	[ECalBackendEws] Prevent crash when item has no MIME content set (Milan Crha)
+	Correct arguments of g_dngettext() added in the previous commit (Milan Crha)
+
+Translations:
+	Mario Blättermann (de)
+	Marek Cernocky (cs)
+	Piotr Drąg (pl)
+	Kukuh Syafaat (id)
+
+Evolution-EWS 3.27.2 2017-11-13
+-------------------------------
+
+Bug Fixes:
+	Bug 760329 - Try to poke autodiscovery when creating new account (Milan Crha)
+
+Miscellaneous:
+	Prevent crash under ews_backend_sync_created_folders() (Milan Crha)
+	Synchronize authentication extensions before creating an ESource (Milan Crha)
+
+Translations:
+	Daniel Mustieles (es)
+	Alan Mortensen (da)
+	Ask Hjorth Larsen (da)
+	Piotr Drąg (pl)
+
+Evolution-EWS 3.27.1 2017-10-16
+-------------------------------
+
+Bug Fixes:
+	Bug 786982 - After pressing "NOT JUNK" mail stays in the Junk folder (Milan Crha)
+	Bug 786208 - Already opened message box doesn’t show new emails (Milan Crha)
 	Bug 781645 - Skip GSettings schema compile when DESTDIR is set (Milan Crha)
 	Bug 788782 - Deadlock when trying to save changes after vFolder's thaw (Milan Crha)
 
 Miscellaneous:
+	Adapt to rename of evolution.desktop to org.gnome.Evolution.desktop (Milan Crha)
+	Escape spaces in server Categories for message Labels (Milan Crha)
 	Use icaltime_is_utc() instead of icaltimetype::is_utc (Milan Crha)
-	Prevent crash under ews_backend_sync_created_folders() (Milan Crha)
 
 Translations:
-	Daniel Mustieles (es)
-
-Evolution-EWS 3.26.1 2017-10-02
--------------------------------
-
-Bug Fixes:
-	Bug 786208 - Already opened message box doesn’t show new emails (Milan Crha)
-
-Miscellaneous:
-	Escape spaces in server Categories for message Labels (Milan Crha)
+	Matej Urbančič (sl)
+	Aurimas Černius (lt)
 
 Evolution-EWS 3.26.0 2017-09-11
 -------------------------------
