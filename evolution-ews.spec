@@ -4,7 +4,7 @@
 #
 Name     : evolution-ews
 Version  : 3.28.0
-Release  : 16
+Release  : 17
 URL      : https://download.gnome.org/sources/evolution-ews/3.28/evolution-ews-3.28.0.tar.xz
 Source0  : https://download.gnome.org/sources/evolution-ews/3.28/evolution-ews-3.28.0.tar.xz
 Summary  : No detailed summary available
