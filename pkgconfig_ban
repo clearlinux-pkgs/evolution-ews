@@ -1,2 +1,15 @@
 # This file contains pkgconfig build requirements that get picked up
 # but are undesirable. One entry per line, no whitespace.
+_module0
+camel-1.2>=${eds_minimum_version}
+evolution-calendar-3.0>=${evo_minimum_version}
+evolution-data-server-1.2>=${eds_minimum_version}
+evolution-mail-3.0>=${evo_minimum_version}
+evolution-shell-3.0>=${evo_minimum_version}
+libebackend-1.2>=${eds_minimum_version}
+libebook-1.2>=${eds_minimum_version}
+libecal-1.2>=${eds_minimum_version}
+libedata-book-1.2>=${eds_minimum_version}
+libedata-cal-1.2>=${eds_minimum_version}
+libedataserver-1.2>=${eds_minimum_version}
+libsoup-2.4>=${soup_minimum_version}
