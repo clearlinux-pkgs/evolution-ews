@@ -4,7 +4,7 @@
 #
 Name     : evolution-ews
 Version  : 3.30.0
-Release  : 24
+Release  : 25
 URL      : https://download.gnome.org/sources/evolution-ews/3.30/evolution-ews-3.30.0.tar.xz
 Source0  : https://download.gnome.org/sources/evolution-ews/3.30/evolution-ews-3.30.0.tar.xz
 Summary  : No detailed summary available
