@@ -1,5 +1,17 @@
-Evolution-EWS 3.30.5 2019-02-04
+Evolution-EWS 3.32.0 2019-03-11
 -------------------------------
+
+Translations:
+	Nathan Follens (nl)
+
+Evolution-EWS 3.31.91 2019-02-18
+--------------------------------
+
+Miscellaneous:
+	Implement 'exists' ESExp function in the book backend (Milan Crha)
+
+Evolution-EWS 3.31.90 2019-02-04
+--------------------------------
 
 Bug Fixes:
 	I#25 - Canceled meetings remain in the calendar with Canceled: title (Milan Crha)
@@ -7,47 +19,78 @@ Bug Fixes:
 	I#31 - Duplicate attendees in meetings from Office365.com (Milan Crha)
 	I#32 - Run ResolveNames for "Any field contains" searches (Milan Crha)
 
-Evolution-EWS 3.30.3 2018-12-10
+Miscellaneous:
+	Use also -DCAMEL_DISABLE_DEPRECATED=1 in the maintainer mode (Milan Crha)
+
+Translations:
+	Balázs Úr (hu)
+
+Evolution-EWS 3.31.4 2019-01-07
+-------------------------------
+
+Translations:
+	Anders Jonsson (sv)
+
+Evolution-EWS 3.31.3 2018-12-10
+-------------------------------
+
+Bug Fixes:
+	eds-I#54 - Enable 'Listen for server change notifications' by default (Milan Crha)
+	I#27 - SSL Certificates are not validated (Milan Crha)
+
+Miscellaneous:
+	Fix a build break with glib pre-2.54 and bump libsoup version to 2.58 (Milan Crha)
+	Correct how extra compiler warnings are used in the maintainer mode (Milan Crha)
+
+Translations:
+	Kukuh Syafaat (id)
+	Rafael Fontenelle (pt_BR)
+	Aurimas Černius (lt)
+
+Evolution-EWS 3.31.2 2018-11-12
 -------------------------------
 
 Bug Fixes:
 	I#17 - [Calendar] Retry item download on ErrorBatchProcessingStopped error (Milan Crha)
+	I#18 - Crashes when reading EWS Global Address List (Milan Crha)
+	I#23 - Autodiscovery uses EXCH URLs instead of EXPR (Milan Crha)
+	I#24 - Sync CategoryList with mail Labels (Milan Crha)
 
 Miscellaneous:
 	Make sure intltool-merge cache is created only once (Milan Crha)
 
-Evolution-EWS 3.30.2 2018-10-22
--------------------------------
-
-Bug Fixes:
-	I#18 - Crashes when reading EWS Global Address List (Milan Crha)
-	I#19 - Country is forgotten along the way to exchange server (Milan Crha)
-	I#21 - Meeting with attachment cannot be saved in 2010 (Milan Crha)
-	I#23 - Autodiscovery uses EXCH URLs instead of EXPR (Milan Crha)
-
-Miscellaneous:
-	Enable only Notification reminders in the calendar (Milan Crha)
-	Treat 'Unknown' ResponseType as Needs-Action (Milan Crha)
-	Collection backend schedules two 'populate' requests after going online (Milan Crha)
-
 Translations:
+	Piotr Drąg (pl)
+	Marek Cernocky (cs)
+	Rafael Fontenelle (pt_BR)
+	Anders Jonsson (sv)
+	Matej Urbančič (sl)
 	Daniel Mustieles (es)
+	Alan Mortensen (da)
 
-Evolution-EWS 3.30.1 2018-09-24
+Evolution-EWS 3.31.1 2018-10-08
 -------------------------------
 
 Bug Fixes:
 	I#8 - Handle 'Persistent-Auth: false' when provided by the server (Milan Crha)
 	I#14 - Let edit Permissions of root message folder (Milan Crha)
+	I#19 - Country is forgotten along the way to exchange server (Milan Crha)
+	I#21 - Meeting with attachment cannot be saved in 2010 (Milan Crha)
 
 Miscellaneous:
 	Calendar invites added with the wrong time zone (Milan Crha)
 	Fix an invalid unref call and a memory leak of an EEwsConnection object (Milan Crha)
+	Enable only Notification reminders in the calendar (Milan Crha)
+	Treat 'Unknown' ResponseType as Needs-Action (Milan Crha)
+	Collection backend schedules two 'populate' requests after going online (Milan Crha)
 
 Translations:
 	Balázs Meskó (hu)
 	Anders Jonsson (sv)
+	Alan Mortensen (da)
 	Marek Cernocky (cs)
+	Jordi Mas (ca)
+	Daniel Mustieles (es)
 
 Evolution-EWS 3.30.0 2018-09-03
 -------------------------------
