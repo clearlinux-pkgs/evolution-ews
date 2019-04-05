@@ -4,7 +4,7 @@
 #
 Name     : evolution-ews
 Version  : 3.32.0
-Release  : 30
+Release  : 31
 URL      : https://download.gnome.org/sources/evolution-ews/3.32/evolution-ews-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/evolution-ews/3.32/evolution-ews-3.32.0.tar.xz
 Summary  : MS Exchange integration through Exchange Web Services
