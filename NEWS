@@ -1,23 +1,104 @@
-Evolution-EWS 3.32.2 2019-05-06
+Evolution-EWS 3.34.0 2019-09-09
+-------------------------------
+
+Miscellaneous:
+	No code/translation changes
+
+Evolution-EWS 3.33.92 2019-09-02
+--------------------------------
+
+Bug Fixes:
+	I#60 - Messages deleted in public folders cannot be moved to Deleted Items (Milan Crha)
+
+Miscellaneous:
+	Fix a memory leak in camel_ews_store_ensure_virtual_folders() (Milan Crha)
+
+Translations:
+	Anders Jonsson (sv)
+	Bruce Cowan (en_GB)
+	Petr Kovář (cs)
+
+Evolution-EWS 3.33.91 2019-08-19
+--------------------------------
+
+Bug Fixes:
+	I#55 - Consider mail aliases when searching for an attendee property (Milan Crha)
+	I#56 - README: Correct typo (bby-bishopclark)
+	I#57 - Birthday date of Contact depends on system timezone (Milan Crha)
+	evo-I#568 - Set GtkLabel's width-chars when using line-wrap (Milan Crha)
+
+Evolution-EWS 3.33.90 2019-08-05
+--------------------------------
+
+Translations:
+	Rafael Fontenelle (pt_BR)
+
+Evolution-EWS 3.33.4 2019-07-15
 -------------------------------
 
 Bug Fixes:
-	M!2 - Correct memory leak and typo in e_ews_autodiscover_ws_url() (Дилян Палаузов)
+	I#53 - Add support for "redirectAddr" in autodiscovery (Milan Crha)
+	M!3 - Prefer g_string_append_c() over g_string_append() (Дилян Палаузов)
+	M!4 - Ignore the return value of g_string_append() (Дилян Палаузов)
 
 Miscellaneous:
-	Use lower-case "mailto:" consistently in the code (Milan Crha)
+	Fix few memory leaks in e_cal_backend_ews_rid_to_index() (Milan Crha)
+	Count with an ICalTimezone without internal component in ewscal_set_availability_timezone() (Milan Crha)
+	Categories property cannot be deleted (Milan Crha)
 
-Evolution-EWS 3.32.1 2019-04-08
+Translations:
+	Daniel Mustieles (es)
+	Kukuh Syafaat (id)
+
+Evolution-EWS 3.33.3 2019-06-17
+-------------------------------
+
+Bug Fixes:
+	I#42 - Check also DNS SRV _autodiscover._tcp during autodiscover (Milan Crha)
+	I#49 - Test suite is failing (Milan Crha)
+	eds-I#120 - Fails to build with libasan using Clang (undefined symbols) (Milan Crha)
+	eds-M!15 - Fix typos in CMake modules (Дилян Палаузов)
+
+Miscellaneous:
+	Fix issues found during 'make check' (Milan Crha)
+	Fix some compiler warnings reported by Clang in the test code (Milan Crha)
+
+Translations:
+	Balázs Úr (hu)
+
+Evolution-EWS 3.33.2 2019-05-20
+-------------------------------
+
+Bug Fixes:
+	eds-M!14 - Correct typo in a comment in the main CMakeLists.txt (Дилян Палаузов)
+
+Miscellaneous:
+	Add refresh interval options to non-mail sources (Milan Crha)
+	Port to libecal-2.0 and adapt to address book API changes (Milan Crha)
+
+Translations:
+	Daniel Mustieles (es)
+	Piotr Drąg (pl)
+
+Evolution-EWS 3.33.1 2019-04-22
 -------------------------------
 
 Bug Fixes:
 	I#39 - Let handle recurring task completion by the server (Milan Crha)
 	I#41 - Unreachable EWS service causes Calendar(s) to disappear (Milan Crha)
-	M!1 - Do not pass 'scope' parameter in OAuth2 requests on outlook.office365.com server (Luca Boccassi)
+	M!1 - Simplify OAuth2 for outlook.office365.com server (Luca Boccassi)
+	M!2 - Correct memory leak and typo in e_ews_autodiscover_ws_url() (Дилян Палаузов)
+	eds-I#94 - Remove -Wabi from the default C++ warning flags (Milan Crha)
+
+Miscellaneous:
+	Use lower-case "mailto:" consistently in the code (Milan Crha)
 
 Translations:
 	Марко Костић (sr)
 	Tim Sabsch (de)
+	Rafael Fontenelle (pt_BR)
+	Piotr Drąg (pl)
+	Kukuh Syafaat (id)
 
 Evolution-EWS 3.32.0 2019-03-11
 -------------------------------
