@@ -1,24 +1,84 @@
-Evolution-EWS 3.34.3 2020-01-03
+Evolution-EWS 3.36.0 2020-03-06
+-------------------------------
+
+Miscellaneous:
+	No code/translation changes
+
+Evolution-EWS 3.35.92 2020-02-28
+--------------------------------
+
+Translations:
+	Anders Jonsson (sv)
+	Rafael Fontenelle (pt_BR)
+	Serdar Sağlam (tr)
+	Balázs Úr (hu)
+	Nathan Follens (nl)
+
+Evolution-EWS 3.35.91 2020-02-14
+--------------------------------
+
+Bug Fixes:
+	I#77 - Can sometimes stop listening for server notifications (Milan Crha)
+	I#84 - Fails to create event with no duration (Milan Crha)
+	I#85 - Map 'tzone://Microsoft/Utc' to libical's 'UTC' (Milan Crha)
+
+Miscellaneous:
+	Mark connection disconnected only when disconnecting backend/store (Milan Crha)
+
+Translations:
+	Kukuh Syafaat (id)
+
+Evolution-EWS 3.35.90 2020-01-31
+--------------------------------
+
+Bug Fixes:
+	Bug 731454 - Add option to set number of concurrent connections to use (Milan Crha)
+	I#61 - Add option to show public folders beside user folders (Milan Crha)
+	I#67 - Be able to edit display name of a calendar (Milan Crha)
+	I#78 - Verify also URL validity in account settings (Milan Crha)
+
+Miscellaneous:
+	Allow enter distinguished folder names when subscribing to other user's folder (Milan Crha)
+	Prefer GSlice over heap allocation for short-lived structures (Milan Crha)
+
+Translations:
+	Daniel Mustieles (es)
+	Piotr Drąg (pl)
+	Kukuh Syafaat (id)
+
+Evolution-EWS 3.35.3 2020-01-03
 -------------------------------
 
 Bug Fixes:
 	I#81 - Attachment flag not shown on messages with attachment (Milan Crha)
 
-Evolution-EWS 3.34.2 2019-11-22
+Translations:
+	Rafael Fontenelle (pt_BR)
+
+Evolution-EWS 3.35.2 2019-11-22
+-------------------------------
+
+Bug Fixes:
+	I#52 - Disable iTip message send when copy/move meeting between calendars (Milan Crha)
+	I#70 - Fails to delete one instance of a recurring event (Milan Crha)
+
+Miscellaneous:
+	Reject creating meetings organized by other users (Milan Crha)
+	Some meetings shown as plain events (Milan Crha)
+	Disconnect signal handlers on connection object in dispose of book/calendar backend (Milan Crha)
+
+Translations:
+	Jordi Mas (ca)
+	Piotr Drąg (pl)
+	Daniel Mustieles (es)
+	Anders Jonsson (sv)
+	Andika Triwidada (id)
+
+Evolution-EWS 3.35.1 2019-10-11
 -------------------------------
 
 Bug Fixes:
 	I#64 - "Listen for server notifications" does not work with OAuth2 (Milan Crha)
-	I#70 - Fails to delete one instance of a recurring event (Milan Crha)
-
-Miscellaneous:
-	Some meetings shown as plain events (Milan Crha)
-	Disconnect signal handlers on connection object in dispose of book/calendar backend (Milan Crha)
-
-Evolution-EWS 3.34.1 2019-10-07
--------------------------------
-
-Bug Fixes:
 	I#65 - "High priority" flag ignored on message send (Milan Crha)
 	I#66 - Update list of unknown timezones for a unit test (Milan Crha)
 	I#69 - Send meeting change notifications only if being the organizer (Milan Crha)
@@ -29,6 +89,7 @@ Miscellaneous:
 	Autodiscover: Do not change user name with RedirectAddr (Milan Crha)
 
 Translations:
+	Марко Костић (sr)
 	Asier Sarasua Garmendia (eu)
 
 Evolution-EWS 3.34.0 2019-09-09
