@@ -1,22 +1,51 @@
-Evolution-EWS 3.36.5 2020-08-07
+Evolution-EWS 3.38.0 2020-09-11
 -------------------------------
+
+Translations:
+	Mario Blättermann (de)
+	Aurimas Černius (lt)
+
+Evolution-EWS 3.37.92 2020-09-04
+--------------------------------
+
+Bug Fixes:
+	I#117 - Task completion date shifted by user's zone UTC offset (Milan Crha)
+	I#118 - Camel: Claim required credentials when authentication fails (Milan Crha)
+	eds-I#208 - Avoid race condition when refreshing collection backend (Milan Crha)
+
+Translations:
+	Yuri Chornoivan (uk)
+	Zander Brown (en_GB)
+	Piotr Drąg (pl)
+	Daniel Mustieles (es)
+	Rafael Fontenelle (pt_BR)
+
+Evolution-EWS 3.37.90 2020-08-07
+--------------------------------
+
+Bug Fixes:
+	I#66 - Adapt the timezones test (Milan Crha)
+	I#66 - Correct how tests use uhttpmock (Milan Crha)
+	I#111 - Correct license comments in the source files (Milan Crha)
 
 Miscellaneous:
 	Provided SoupAuth might not be always used by libsoup (Milan Crha)
+	Add (disabled by default) Microsoft 365 (Graph API) connector (Milan Crha)
 
-Evolution-EWS 3.36.4 2020-07-03
+Evolution-EWS 3.37.3 2020-07-03
 -------------------------------
 
 Bug Fixes:
 	evo-I#982 - 'Message contains'-search broken in 3.36.3 (Milan Crha)
 
 Miscellaneous:
+	PrintableOptions.cmake: Sync the file with Evolution changes (Milan Crha)
 	camel_ews_folder_new: Remove useless reference on the CamelSettings (Milan Crha)
 
 Translations:
 	Daniel Șerbănescu (ro)
 
-Evolution-EWS 3.36.3 2020-05-29
+Evolution-EWS 3.37.2 2020-05-29
 -------------------------------
 
 Bug Fixes:
@@ -25,24 +54,21 @@ Bug Fixes:
 	I#103 - Can't subscribe to a folder of a user whom is not in GAL (Milan Crha)
 
 Miscellaneous:
+	SetupBuildFlags.cmake: Use -Werror=implicit-function-declaration only for C code compilation (Milan Crha)
 	EEwsNotification: Change how subscription to server change notifications work (Milan Crha)
 	Add parameter check into ews_get_error_code() (Milan Crha)
 
-Evolution-EWS 3.36.2 2020-04-24
+Evolution-EWS 3.37.1 2020-04-24
 -------------------------------
 
 Bug Fixes:
 	I#45 - Event time shifted by an hour after edit for some time zones (Milan Crha)
+	evo-I#831 - Free/Busy times are not in UTC (Milan Crha)
 
 Translations:
 	Goran Vidović (hr)
 	Yuri Chornoivan (uk)
-
-Evolution-EWS 3.36.1 2020-03-27
--------------------------------
-
-Bug Fixes:
-	evo-I#831 - Free/Busy times are not in UTC (Milan Crha)
+	Aurimas Černius (lt)
 
 Evolution-EWS 3.36.0 2020-03-06
 -------------------------------

@@ -1,5 +1,5 @@
 PKG_NAME := evolution-ews
-URL = https://download.gnome.org/sources/evolution-ews/3.36/evolution-ews-3.36.5.tar.xz
+URL = https://download.gnome.org/sources/evolution-ews/3.38/evolution-ews-3.38.0.tar.xz
 ARCHIVES = 
 
 include ../common/Makefile.common
