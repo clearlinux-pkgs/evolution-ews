@@ -4,7 +4,7 @@
 #
 Name     : evolution-ews
 Version  : 3.38.0
-Release  : 43
+Release  : 44
 URL      : https://download.gnome.org/sources/evolution-ews/3.38/evolution-ews-3.38.0.tar.xz
 Source0  : https://download.gnome.org/sources/evolution-ews/3.38/evolution-ews-3.38.0.tar.xz
 Summary  : No detailed summary available
