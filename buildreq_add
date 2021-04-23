@@ -1,8 +1,8 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-intltool
-glib-dev
+enchant-dev
 evolution-data-server-dev
 evolution-dev
+glib-dev
+intltool
 libmspack-dev
-enchant-dev
