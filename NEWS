@@ -1,4 +1,20 @@
-Evolution-EWS 3.42.4 2022-02-11
+Evolution-EWS 3.44.0 2022-03-18
+-------------------------------
+
+Translations:
+	Asier Sarasua Garmendia (eu)
+	Balázs Úr (hu)
+	Dušan Kazik (sk)
+	Emin Tufan Çetin (tr)
+	Jordi Mas i Hernandez (ca)
+
+Evolution-EWS 3.43.3 2022-03-04
+-------------------------------
+
+Bug Fixes:
+	M!7 - OAuth2: Remove prompt=login parameter from auth URL (Brian J. Murrell)
+
+Evolution-EWS 3.43.2 2022-02-11
 -------------------------------
 
 Bug Fixes:
@@ -10,33 +26,38 @@ Miscellaneous:
 	e-ews-connection: Clear cached connection before sending a request
 
 Translations:
+	Daniel Mustieles (es)
 	Daniel Șerbănescu (ro)
 
-Evolution-EWS 3.42.3 2022-01-07
+Evolution-EWS 3.43.1 2022-01-07
 -------------------------------
 
 Bug Fixes:
+	I#3 - Contacts: Retrieve user certificate
+	I#163 - GAL: Postpone user photo download
+	I#165 - Contacts: Support categories
+	I#166 - Unable to set follow-up flag without a due date
 	I#174 - Silently retry on I/O errors (like 'Connection terminated unexpectedly')
+	evo-I#1637 - EMailAutoconfig: Autoconfig with Exchange accounts
 
 Miscellaneous:
+	ConfigLookup: Change values saved to the lookup result
+	ConfigLookup: Remove duplicated 'if'
+	Addressbook: Fix two memory leaks
+	Use `g_assert_true()` instead of `g_assert()` in the unit tests
 	Misc: Hide some headers' value in EWS_DEBUG=2 output
 
-Evolution-EWS 3.42.1 2021-10-29
--------------------------------
-
-Bug Fixes:
-	I#3 - Contacts: Retrieve user certificate (Milan Crha)
-	I#163 - GAL: Postpone user photo download (Milan Crha)
-	I#165 - Contacts: Support categories (Milan Crha)
-	I#166 - Unable to set follow-up flag without a due date (Milan Crha)
-
-Miscellaneous:
-	ConfigLookup: Change values saved to the lookup result (Milan Crha)
-	Addressbook: Fix two memory leaks (Milan Crha)
-
 Translations:
-	Мирослав Николић (sr)
+	Anders Jonsson (sv)
+	Andika Triwidada (id)
+	Aurimas Černius (lt)
+	Enrico Nicoletto (pt_BR)
 	Goran Vidović (hr)
+	Jordi Mas (ca)
+	Marek Černocký (cs)
+	Piotr Drąg (pl)
+	Yuri Chornoivan (uk)
+	Мирослав Николић (sr)
 
 Evolution-EWS 3.42.0 2021-09-17
 -------------------------------
