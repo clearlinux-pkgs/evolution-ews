@@ -4,7 +4,7 @@
 #
 Name     : evolution-ews
 Version  : 3.46.0
-Release  : 64
+Release  : 65
 URL      : https://download.gnome.org/sources/evolution-ews/3.46/evolution-ews-3.46.0.tar.xz
 Source0  : https://download.gnome.org/sources/evolution-ews/3.46/evolution-ews-3.46.0.tar.xz
 Summary  : No detailed summary available
