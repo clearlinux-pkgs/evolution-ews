@@ -1,7 +1,29 @@
-Evolution-EWS 3.46.4 2023-02-10
+Evolution-EWS 3.48.0 2023-03-17
+-------------------------------
+
+Translations:
+	Piotr Drąg (pl)
+	Sabri Ünal (tr)
+
+Evolution-EWS 3.47.3 2023-03-03
 -------------------------------
 
 Bug Fixes:
+	I#223 - OAuth2: Add option to use version 2.0 of the API
+
+Translations:
+	Anders Jonsson (sv)
+	Aurimas Černius (lt)
+	Balázs Úr (hu)
+	Jürgen Benvenuti (de)
+	Sabri Ünal (tr)
+	Yuri Chornoivan (uk)
+
+Evolution-EWS 3.47.2 2023-02-10
+-------------------------------
+
+Bug Fixes:
+	I#210 - Add option to always use HTTP/1
 	I#211 - Calendar: Cover possible ID conversion for Online meetings
 	I#216 - Calendar: Ensure TimeZone info in SOAP-header request
 	I#219 - Disabled sources auto-re-enabled the next start
@@ -9,25 +31,36 @@ Bug Fixes:
 	I#221 - Subscribed free/busy calendar does not show all events
 
 Miscellaneous:
+	Enable GitLab CI for easier testing of the changes
+	Remove duplicated OAuth2 code
 	Sanitize headers in debug log also for level 1
 
-Evolution-EWS 3.46.3 2023-01-06
--------------------------------
-
-Miscellaneous:
-	ecb_ews_get_timezone: Check for non-NULL `tzid` to avoid runtime warning
-
 Translations:
-	Asier Sarasua Garmendia (eu)
+	Alan Mortensen (da)
+	Anders Jonsson (sv)
+	Goran Vidović (hr)
+	Piotr Drąg (pl)
+	Sabri Ünal (tr)
+	Yuri Chornoivan (uk)
 
-Evolution-EWS 3.46.2 2022-12-02
+Evolution-EWS 3.47.1 2023-01-06
 -------------------------------
 
 Bug Fixes:
+	I#153 - Limit Subject/Summary/Location text length
 	I#201 - EWS: Subscription with subfolders doesn't find subfolders
 	I#206 - Can't change Authentication Method back to NTLM
 
 Miscellaneous:
+	Handle negative value for GUri's port
+	ews_store_subscribe_folder_sync: Turn two runtime warnings into regular errors
+	Microsoft365: Use 'To-Do' API for tasks
+	EwsConnect: Early stop a response traversal
+	ESoapResponse: Allow NULL for some traversal functions
+	ebb_ews_mailbox_to_contact: Fix a memory leak
+	Microsoft365: Implement raw MIME message upload
+	Microsoft365: Correct task Due and Completed date read
+	EEwsPhotoSource: Do not use GTask thread pool, but use its own serialized pool
 	Camel: Remove invalid 'else' in ews_get_folder_info_sync()
 	EWS: GetFolderPermissions response lost
 	EEwsNotification: Re-subscribe when current subscription fails
@@ -38,24 +71,22 @@ Miscellaneous:
 	EEwsOooNotificator: Simplify response code to the alert
 	Subscribe foreign folder dialog does not close on success
 	EEwsSearchUser: Fix a small memory leak
+	ecb_ews_get_timezone: Check for non-NULL `tzid` to avoid runtime warning
 
 Translations:
-	Ekaterine Papava (ka)
+	Alan Mortensen (da)
+	Anders Jonsson (sv)
+	Asier Sarasua Garmendia (eu)
+	Balázs Úr (hu)
+	Goran Vidović (hr)
 	Hugo Carvalho (pt)
-	Nathan Follens (nl)
-
-Evolution-EWS 3.46.1 2022-10-21
--------------------------------
-
-Miscellaneous:
-	Handle negative value for GUri's port
-	EwsConnect: Early stop a response traversal
-	ESoapResponse: Allow NULL for some traversal functions
-	ebb_ews_mailbox_to_contact: Fix a memory leak
-
-Translations:
 	Jürgen Benvenuti (de)
+	Kukuh Syafaat (id)
 	Мирослав Николић (sr)
+	Nathan Follens (nl)
+	Piotr Drąg (pl)
+	Rafael Fontenelle (pt_BR)
+	Yuri Chornoivan (uk)
 
 Evolution-EWS 3.46.0 2022-09-16
 -------------------------------
