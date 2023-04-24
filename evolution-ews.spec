@@ -5,7 +5,7 @@
 #
 Name     : evolution-ews
 Version  : 3.48.1
-Release  : 73
+Release  : 74
 URL      : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.1.tar.xz
 Source0  : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.1.tar.xz
 Summary  : No detailed summary available
