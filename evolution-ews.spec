@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : evolution-ews
-Version  : 3.48.1
-Release  : 74
-URL      : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.1.tar.xz
-Source0  : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.1.tar.xz
+Version  : 3.48.2
+Release  : 75
+URL      : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.2.tar.xz
+Source0  : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.2.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -90,38 +90,59 @@ locales components for the evolution-ews package.
 
 
 %prep
-%setup -q -n evolution-ews-3.48.1
-cd %{_builddir}/evolution-ews-3.48.1
+%setup -q -n evolution-ews-3.48.2
+cd %{_builddir}/evolution-ews-3.48.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682373767
+export SOURCE_DATE_EPOCH=1685125400
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+%cmake ..
+make  %{?_smp_mflags}
+popd
+mkdir -p clr-build-avx2
+pushd clr-build-avx2
+export GCC_IGNORE_WERROR=1
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export FCFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export FFLAGS="$FFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export CXXFLAGS="$CXXFLAGS -O3 -Wl,-z,x86-64-v3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd -march=x86-64-v3 "
+export CFLAGS="$CFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export CXXFLAGS="$CXXFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FFLAGS="$FFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
+export FCFLAGS="$FCFLAGS -march=x86-64-v3 -m64 -Wl,-z,x86-64-v3"
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1682373767
+export SOURCE_DATE_EPOCH=1685125400
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/evolution-ews
 cp %{_builddir}/evolution-ews-%{version}/COPYING %{buildroot}/usr/share/package-licenses/evolution-ews/4df5d4b947cf4e63e675729dd3f168ba844483c7 || :
+pushd clr-build-avx2
+%make_install_v3  || :
+popd
 pushd clr-build
 %make_install
 popd
 %find_lang evolution-ews
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -136,6 +157,19 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
+/V3/usr/lib64/evolution-data-server/addressbook-backends/libebookbackendews.so
+/V3/usr/lib64/evolution-data-server/addressbook-backends/libebookbackendmicrosoft365.so
+/V3/usr/lib64/evolution-data-server/calendar-backends/libecalbackendews.so
+/V3/usr/lib64/evolution-data-server/calendar-backends/libecalbackendmicrosoft365.so
+/V3/usr/lib64/evolution-data-server/camel-providers/libcamelews.so
+/V3/usr/lib64/evolution-data-server/camel-providers/libcamelmicrosoft365.so
+/V3/usr/lib64/evolution-data-server/registry-modules/module-ews-backend.so
+/V3/usr/lib64/evolution-data-server/registry-modules/module-microsoft365-backend.so
+/V3/usr/lib64/evolution-ews/libcamelews-priv.so
+/V3/usr/lib64/evolution-ews/libevolution-ews.so
+/V3/usr/lib64/evolution-ews/libevolution-microsoft365.so
+/V3/usr/lib64/evolution/modules/module-ews-configuration.so
+/V3/usr/lib64/evolution/modules/module-microsoft365-configuration.so
 /usr/lib64/evolution-data-server/addressbook-backends/libebookbackendews.so
 /usr/lib64/evolution-data-server/addressbook-backends/libebookbackendmicrosoft365.so
 /usr/lib64/evolution-data-server/calendar-backends/libecalbackendews.so
