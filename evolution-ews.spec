@@ -5,7 +5,7 @@
 #
 Name     : evolution-ews
 Version  : 3.48.2
-Release  : 75
+Release  : 76
 URL      : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.2.tar.xz
 Source0  : https://download.gnome.org/sources/evolution-ews/3.48/evolution-ews-3.48.2.tar.xz
 Summary  : No detailed summary available
@@ -98,7 +98,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685125400
+export SOURCE_DATE_EPOCH=1685501053
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -131,7 +131,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1685125400
+export SOURCE_DATE_EPOCH=1685501053
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/evolution-ews
 cp %{_builddir}/evolution-ews-%{version}/COPYING %{buildroot}/usr/share/package-licenses/evolution-ews/4df5d4b947cf4e63e675729dd3f168ba844483c7 || :
