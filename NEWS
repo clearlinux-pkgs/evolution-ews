@@ -1,22 +1,69 @@
-Evolution-EWS 3.48.2 2023-05-26
+Evolution-EWS 3.50.0 2023-09-15
+-------------------------------
+
+Miscellaneous:
+	Calendar: Unlock connection lock before refreshing the calendar on component load
+	ci: Rename org.gnome.evolution-ews.nightly to org.gnome.EvolutionEws.Devel
+
+Translations:
+	Aurimas Černius (lt)
+	Daniel Rusek (cs)
+	Martin Srebotnjak (sl)
+
+Evolution-EWS 3.49.3 2023-09-01
 -------------------------------
 
 Bug Fixes:
+	I#241 - Ask for credentials when access token refresh fails
+
+Miscellaneous:
+	EWS calendar: Do not link against Evolution libraries
+
+Translations:
+	Anders Jonsson (sv)
+	Boyuan Yang (zh_CN)
+	Jürgen Benvenuti (de)
+	Sabri Ünal (tr)
+
+Evolution-EWS 3.49.2 2023-08-04
+-------------------------------
+
+Bug Fixes:
+	I#238 - Parse XML responses in recovery mode
+	I#242 - Calendar: Provide user comments in the invitation response
+	eds-I#59 - CalDAV: Allow to disable schedule reply on remove
+	eds-I#180 - Add option to reduce book/cal data usage when on a metered connection
+
+Miscellaneous:
+	OALComboBox: Always prefer collection ESource when fetching list of OABs
+
+Translations:
+	Balázs Úr (hu)
+	Danial Behzadi (fa)
+
+Evolution-EWS 3.49.1 2023-06-30
+-------------------------------
+
+Bug Fixes:
+	I#225 - Mail: Add per-folder option to always check for new mail
 	I#232 - Sometimes fails to delete recurring event occurrence
 	I#234 - Ask for OAuth2 credentials for autodiscovery
 
-Translations:
-	Hugo Carvalho (pt)
-
-Evolution-EWS 3.48.1 2023-04-21
--------------------------------
+Miscellaneous:
+	DOAP: Update mailing-list URL; add link to Discourse support-forum (Andre Klapper)
+	CI: Use org.freedesktop.Sdk.Extension.vala in nightly flatpak manifest
 
 Translations:
 	Andika Triwidada (id)
 	Asier Sarasua Garmendia (eu)
 	Enrico Nicoletto (pt_BR)
+	Hugo Carvalho (pt)
+	Jiri Eischmann (cs)
 	Мирослав Николић (sr)
+	Piotr Drąg (pl)
+	Sabri Ünal (tr)
 	Sergej A (ru)
+	Yuri Chornoivan (uk)
 
 Evolution-EWS 3.48.0 2023-03-17
 -------------------------------
