@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : evolution-ews
-Version  : 3.52.1
-Release  : 82
-URL      : https://download.gnome.org/sources/evolution-ews/3.52/evolution-ews-3.52.1.tar.xz
-Source0  : https://download.gnome.org/sources/evolution-ews/3.52/evolution-ews-3.52.1.tar.xz
+Version  : 3.52.2
+Release  : 83
+URL      : https://download.gnome.org/sources/evolution-ews/3.52/evolution-ews-3.52.2.tar.xz
+Source0  : https://download.gnome.org/sources/evolution-ews/3.52/evolution-ews-3.52.2.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -92,15 +92,15 @@ locales components for the evolution-ews package.
 
 
 %prep
-%setup -q -n evolution-ews-3.52.1
-cd %{_builddir}/evolution-ews-3.52.1
+%setup -q -n evolution-ews-3.52.2
+cd %{_builddir}/evolution-ews-3.52.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713795803
+export SOURCE_DATE_EPOCH=1716863336
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -161,7 +161,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1713795803
+export SOURCE_DATE_EPOCH=1716863336
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/evolution-ews
 cp %{_builddir}/evolution-ews-%{version}/COPYING %{buildroot}/usr/share/package-licenses/evolution-ews/4df5d4b947cf4e63e675729dd3f168ba844483c7 || :
