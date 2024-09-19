@@ -1,50 +1,75 @@
-Evolution-EWS 3.52.4 2024-08-02
+Evolution-EWS 3.54.0 2024-09-13
+-------------------------------
+
+Translations:
+	Alan Mortensen (da)
+	Anders Jonsson (sv)
+	Bruce Cowan (en_GB)
+	Piotr Drąg (pl)
+	Sabri Ünal (tr)
+
+Evolution-EWS 3.53.3 2024-08-30
+-------------------------------
+
+Translations:
+	Asier Sarasua Garmendia (eu)
+	Balázs Úr (hu)
+	Juliano de Souza Camargo (pt_BR)
+
+Evolution-EWS 3.53.2 2024-08-02
 -------------------------------
 
 Bug Fixes:
+	I#276 - m365: Slow search with "Message contains"
 	I#277 - Contacts: Offline GAL not searched with "manual query" views
 	I#278 - m365: Workaround MIME send server's reencode with forced base64
+	M!11 - OAuth2: Implement prompter cookie interface for Intune support (Felix Moessbauer)
 
-Evolution-EWS 3.52.3 2024-06-28
+Miscellaneous:
+	CI: Update dependencies in the Flatpak manifest
+	m365: Calendar: Ability to create Online meeting
+	Misc: Extract common code into a new shared library
+
+Translations:
+	Boyuan Yang (zh_CN)
+	Jürgen Benvenuti (de)
+	Martin (sl)
+	Yuri Chornoivan (uk)
+
+Evolution-EWS 3.53.1 2024-06-28
 -------------------------------
 
 Bug Fixes:
+	I#263 - Misspelling of "than" in translatable string
+	I#267 - m365: Accepting event sends mail to each recipient
+	I#273 - m365: Cannot import ICS calendar file
 	I#274 - m365: A removed task in the web app is not removed in Evolution
 	I#275 - Mails sent only to the first recipient in the list
+	eds-I#518 - WebDAV: Handle `Retry-After` header on 503 error
+	evo-I#2230 - Configurable timeout for WebDAV sources
+	evo-I#2687 - Calendar: Allow entering cancellation reason on meeting deletion
 
 Miscellaneous:
+	Do not include buildir in libecalbackendews.so
+	m365: Calendar: Correct read of file attachments
+	m365: Calendar: Read detached and deleted instances of event series
+	m365: Calendar: Write detached and deleted instances of event series
+	m365: Calendar: Fix a memory leak when loading event/task
 	m365 Camel: Auto-save store summary on folder count changes
 	m365 Camel: Send messages as MIME data
 	m365: Fix a memory leak in m365_folder_merge_server_user_flags()
 	CI: Workaround broken git clone for libcanberra
 
 Translations:
+	Andika Triwidada (id)
 	Aurimas Černius (lt)
-
-Evolution-EWS 3.52.2 2024-05-24
--------------------------------
-
-Bug Fixes:
-	I#267 - m365: Accepting event sends mail to each recipient
-
-Miscellaneous:
-	m365: Calendar: Correct read of file attachments
-	m365: Calendar: Read detached and deleted instances of event series
-	m365: Calendar: Write detached and deleted instances of event series
-	m365: Calendar: Fix a memory leak when loading event/task
-
-Translations:
 	Bruce Cowan (en_GB)
 	Daniel Rusek (cs)
-
-Evolution-EWS 3.52.1 2024-04-19
--------------------------------
-
-Miscellaneous:
-	Do not include buildir in libecalbackendews.so
-
-Translations:
+	Ekaterine Papava (ka)
+	Jürgen Benvenuti (de)
 	Martin (sl)
+	Sabri Ünal (tr)
+	Yuri Chornoivan (uk)
 
 Evolution-EWS 3.52.0 2024-03-15
 -------------------------------
